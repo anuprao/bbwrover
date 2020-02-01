@@ -1,0 +1,456 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L myesp32:esp32_wrover U1
+U 1 1 5E3557A3
+P 5650 2250
+F 0 "U1" H 5650 950 50  0000 C CNN
+F 1 "esp32_wrover" H 5650 0   50  0000 C CNN
+F 2 "myesp32lib:ESP32_Wrover" H 5700 2475 50  0001 C CNN
+F 3 "" H 5650 2250 50  0001 C CNN
+	1    5650 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 5E356A8B
+P 4150 4750
+F 0 "#PWR02" H 4150 4500 50  0001 C CNN
+F 1 "GND" H 4155 4577 50  0000 C CNN
+F 2 "" H 4150 4750 50  0001 C CNN
+F 3 "" H 4150 4750 50  0001 C CNN
+	1    4150 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6225 2325 6500 2325
+Wire Wire Line
+	6225 2500 6500 2500
+Wire Wire Line
+	6500 2500 6500 2325
+Wire Wire Line
+	5075 2500 4950 2500
+$Comp
+L Device:CP C2
+U 1 1 5E35938C
+P 4500 2275
+F 0 "C2" H 4618 2321 50  0000 L CNN
+F 1 "200uf" H 4525 2175 50  0000 L CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-7343-15_Kemet-W_Pad2.25x2.55mm_HandSolder" H 4538 2125 50  0001 C CNN
+F 3 "~" H 4500 2275 50  0001 C CNN
+	1    4500 2275
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C1
+U 1 1 5E359ED2
+P 4150 2275
+F 0 "C1" H 4268 2321 50  0000 L CNN
+F 1 "100uf" H 4175 2175 50  0000 L CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-7343-15_Kemet-W_Pad2.25x2.55mm_HandSolder" H 4188 2125 50  0001 C CNN
+F 3 "~" H 4150 2275 50  0001 C CNN
+	1    4150 2275
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4150 2425 4150 2500
+Wire Wire Line
+	4150 2500 4500 2500
+Connection ~ 4950 2500
+Wire Wire Line
+	4500 2425 4500 2500
+Connection ~ 4500 2500
+Wire Wire Line
+	4500 2500 4950 2500
+Wire Wire Line
+	4500 2125 4500 2000
+Wire Wire Line
+	4500 2000 4150 2000
+Wire Wire Line
+	4150 2000 4150 2125
+$Comp
+L Device:R R2
+U 1 1 5E35AB30
+P 3500 2275
+F 0 "R2" H 3570 2321 50  0000 L CNN
+F 1 "10K" H 3570 2230 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 3430 2275 50  0001 C CNN
+F 3 "~" H 3500 2275 50  0001 C CNN
+	1    3500 2275
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4150 2000 3500 2000
+Wire Wire Line
+	3500 2000 3500 2125
+Connection ~ 4150 2000
+Wire Wire Line
+	5075 2700 3500 2700
+$Comp
+L Switch:SW_SPST BTN1
+U 1 1 5E35EC25
+P 3850 2500
+F 0 "BTN1" H 3850 2625 50  0000 C CNN
+F 1 "BTN_EN" H 3850 2375 50  0000 C CNN
+F 2 "Button_Switch_SMD:SW_DIP_SPSTx01_Slide_6.7x4.1mm_W6.73mm_P2.54mm_LowProfile_JPin" H 3850 2500 50  0001 C CNN
+F 3 "~" H 3850 2500 50  0001 C CNN
+	1    3850 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 2700 3500 2500
+Wire Wire Line
+	3650 2500 3500 2500
+Connection ~ 3500 2500
+Wire Wire Line
+	3500 2500 3500 2425
+Wire Wire Line
+	4050 2500 4150 2500
+Connection ~ 4150 2500
+Wire Wire Line
+	4500 2000 4800 2000
+Wire Wire Line
+	4800 2000 4800 2600
+Wire Wire Line
+	4800 2600 5075 2600
+Connection ~ 4500 2000
+$Comp
+L power:VCC #PWR01
+U 1 1 5E3675C6
+P 3500 1575
+F 0 "#PWR01" H 3500 1425 50  0001 C CNN
+F 1 "VCC" H 3517 1748 50  0000 C CNN
+F 2 "" H 3500 1575 50  0001 C CNN
+F 3 "" H 3500 1575 50  0001 C CNN
+	1    3500 1575
+	1    0    0    -1  
+$EndComp
+Connection ~ 3500 2000
+Wire Wire Line
+	6225 2800 7500 2800
+$Comp
+L Device:R R4
+U 1 1 5E36A3FE
+P 7500 2225
+F 0 "R4" H 7570 2271 50  0000 L CNN
+F 1 "10K" H 7570 2180 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 7430 2225 50  0001 C CNN
+F 3 "~" H 7500 2225 50  0001 C CNN
+	1    7500 2225
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 2375 7500 2800
+Connection ~ 7500 2800
+Wire Wire Line
+	5075 3600 3050 3600
+$Comp
+L Device:R R1
+U 1 1 5E37200B
+P 3050 2275
+F 0 "R1" H 3120 2321 50  0000 L CNN
+F 1 "10K" H 3120 2230 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2980 2275 50  0001 C CNN
+F 3 "~" H 3050 2275 50  0001 C CNN
+	1    3050 2275
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3050 2125 3050 2000
+Wire Wire Line
+	3050 2000 3500 2000
+Wire Wire Line
+	3050 2425 3050 2900
+Connection ~ 3050 2900
+Wire Wire Line
+	3050 2900 3050 3600
+Wire Wire Line
+	4150 2500 4150 3100
+Wire Wire Line
+	5075 3900 4150 3900
+Wire Wire Line
+	4150 3900 4150 3100
+Connection ~ 4150 3100
+Wire Wire Line
+	3500 1575 3500 1650
+Wire Wire Line
+	4800 2000 7500 2000
+Wire Wire Line
+	7500 2000 7500 2075
+Connection ~ 4800 2000
+Connection ~ 4150 3900
+$Comp
+L Connector:Conn_01x03_Female J9
+U 1 1 5E3A2E8D
+P 7900 2900
+F 0 "J9" H 7975 2950 50  0000 L CNN
+F 1 "UART1" H 7975 2850 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 7900 2900 50  0001 C CNN
+F 3 "~" H 7900 2900 50  0001 C CNN
+	1    7900 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 2800 7700 2800
+Wire Wire Line
+	6225 2900 7700 2900
+Wire Wire Line
+	7350 3000 7700 3000
+$Comp
+L Connector:Conn_01x03_Female J1
+U 1 1 5E3A7991
+P 2575 3000
+F 0 "J1" H 2725 3050 50  0000 C CNN
+F 1 "UART2" H 2750 2925 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 2575 3000 50  0001 C CNN
+F 3 "~" H 2575 3000 50  0001 C CNN
+	1    2575 3000
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2775 2900 3050 2900
+Wire Wire Line
+	2775 3000 5075 3000
+Wire Wire Line
+	2775 3100 4150 3100
+$Comp
+L Device:R R3
+U 1 1 5E3AD822
+P 6950 3900
+F 0 "R3" V 7050 4100 50  0000 C CNN
+F 1 "10K" V 7050 3900 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 6880 3900 50  0001 C CNN
+F 3 "~" H 6950 3900 50  0001 C CNN
+	1    6950 3900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6225 3900 6800 3900
+Wire Wire Line
+	7100 3900 7350 3900
+Wire Wire Line
+	7350 3900 7350 3000
+Connection ~ 7350 3000
+$Comp
+L Device:R R5
+U 1 1 5E3C3739
+P 8575 3500
+F 0 "R5" H 8645 3546 50  0000 L CNN
+F 1 "10K" H 8645 3455 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 8505 3500 50  0001 C CNN
+F 3 "~" H 8575 3500 50  0001 C CNN
+	1    8575 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8575 2000 7500 2000
+Connection ~ 7500 2000
+Wire Wire Line
+	8575 3650 8575 3800
+Wire Wire Line
+	6225 3800 8575 3800
+Connection ~ 8575 3800
+Wire Wire Line
+	8250 4300 8575 4300
+Wire Wire Line
+	8575 3800 8575 4300
+Wire Wire Line
+	7350 4300 7350 3900
+Connection ~ 7350 3900
+Wire Wire Line
+	8575 2000 8575 3350
+Wire Wire Line
+	7850 4300 7350 4300
+$Comp
+L Switch:SW_SPST BTN2
+U 1 1 5E3CB9C9
+P 8050 4300
+F 0 "BTN2" H 8050 4050 50  0000 C CNN
+F 1 "BTN_FLASH" H 8050 4150 50  0000 C CNN
+F 2 "Button_Switch_SMD:SW_DIP_SPSTx01_Slide_6.7x4.1mm_W6.73mm_P2.54mm_LowProfile_JPin" H 8050 4300 50  0001 C CNN
+F 3 "~" H 8050 4300 50  0001 C CNN
+	1    8050 4300
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Female J2
+U 1 1 5E3FC9F0
+P 4575 2800
+F 0 "J2" H 4700 2800 50  0000 C CNN
+F 1 "Conn" H 4725 2700 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 4575 2800 50  0001 C CNN
+F 3 "~" H 4575 2800 50  0001 C CNN
+	1    4575 2800
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4775 2800 5075 2800
+Wire Wire Line
+	5075 2900 4775 2900
+$Comp
+L Connector:Conn_01x05_Female J3
+U 1 1 5E4005C4
+P 4575 3300
+F 0 "J3" H 4725 3450 50  0000 C CNN
+F 1 "Conn" H 4725 3325 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical" H 4575 3300 50  0001 C CNN
+F 3 "~" H 4575 3300 50  0001 C CNN
+	1    4575 3300
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5075 3100 4775 3100
+Wire Wire Line
+	4775 3200 5075 3200
+Wire Wire Line
+	5075 3300 4775 3300
+Wire Wire Line
+	4775 3400 5075 3400
+Wire Wire Line
+	5075 3500 4775 3500
+$Comp
+L Connector:Conn_01x02_Female J4
+U 1 1 5E408527
+P 4575 3700
+F 0 "J4" H 4725 3725 50  0000 C CNN
+F 1 "Conn" H 4725 3625 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 4575 3700 50  0001 C CNN
+F 3 "~" H 4575 3700 50  0001 C CNN
+	1    4575 3700
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5075 3700 4775 3700
+Wire Wire Line
+	4775 3800 5075 3800
+$Comp
+L Connector:Conn_01x04_Female J5
+U 1 1 5E40C71C
+P 4575 4100
+F 0 "J5" H 4725 4125 50  0000 C CNN
+F 1 "Conn" H 4725 4025 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical" H 4575 4100 50  0001 C CNN
+F 3 "~" H 4575 4100 50  0001 C CNN
+	1    4575 4100
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4775 4000 5075 4000
+Wire Wire Line
+	5075 4100 4775 4100
+Wire Wire Line
+	4775 4200 5075 4200
+Wire Wire Line
+	5075 4300 4775 4300
+$Comp
+L Connector:Conn_01x02_Female J6
+U 1 1 5E414273
+P 6725 2600
+F 0 "J6" H 6775 2600 50  0000 L CNN
+F 1 "Conn" H 6775 2500 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 6725 2600 50  0001 C CNN
+F 3 "~" H 6725 2600 50  0001 C CNN
+	1    6725 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6525 2600 6225 2600
+Wire Wire Line
+	6225 2700 6525 2700
+$Comp
+L Connector:Conn_01x04_Female J8
+U 1 1 5E41A600
+P 6725 4100
+F 0 "J8" H 6775 4100 50  0000 L CNN
+F 1 "Conn" H 6775 4000 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical" H 6725 4100 50  0001 C CNN
+F 3 "~" H 6725 4100 50  0001 C CNN
+	1    6725 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6525 4000 6225 4000
+Wire Wire Line
+	6225 4100 6525 4100
+Wire Wire Line
+	6525 4200 6225 4200
+Wire Wire Line
+	6225 4300 6525 4300
+$Comp
+L Connector:Conn_01x05_Female J7
+U 1 1 5E423D6C
+P 6725 3300
+F 0 "J7" H 6775 3375 50  0000 L CNN
+F 1 "Conn" H 6775 3250 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical" H 6725 3300 50  0001 C CNN
+F 3 "~" H 6725 3300 50  0001 C CNN
+	1    6725 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6225 3200 6525 3200
+Wire Wire Line
+	6525 3300 6225 3300
+Wire Wire Line
+	6225 3400 6525 3400
+Wire Wire Line
+	6525 3500 6375 3500
+Wire Wire Line
+	6375 3500 6375 3700
+Wire Wire Line
+	6375 3700 6225 3700
+Wire Wire Line
+	6525 3100 6375 3100
+Wire Wire Line
+	6375 3100 6375 3000
+Wire Wire Line
+	6375 3000 6225 3000
+Wire Wire Line
+	4150 4750 4150 3900
+$Comp
+L Connector:Conn_01x02_Female J10
+U 1 1 5E48C918
+P 3900 1650
+F 0 "J10" H 3928 1626 50  0000 L CNN
+F 1 "Power Conn." H 3928 1535 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 3900 1650 50  0001 C CNN
+F 3 "~" H 3900 1650 50  0001 C CNN
+	1    3900 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3700 1650 3500 1650
+Connection ~ 3500 1650
+Wire Wire Line
+	3500 1650 3500 2000
+Wire Wire Line
+	3700 1750 3700 1875
+Wire Wire Line
+	3700 1875 4950 1875
+Wire Wire Line
+	4950 1875 4950 2500
+Wire Wire Line
+	4950 1875 6500 1875
+Wire Wire Line
+	7350 1875 7350 3000
+Connection ~ 4950 1875
+Wire Wire Line
+	6500 2325 6500 1875
+Connection ~ 6500 2325
+Connection ~ 6500 1875
+Wire Wire Line
+	6500 1875 7350 1875
+$EndSCHEMATC
